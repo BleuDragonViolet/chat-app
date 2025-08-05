@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Chat</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Chat global</h2>
+    <div id="notifications"></div>
+    <div class="chat-box" id="chatBox"></div>
+    <input type="text" id="messageInput" placeholder="Écris un message..." />
+    <button id="sendButton">Envoyer</button>
+
+    <h3>Utilisateurs connectés</h3>
+    <div class="user-list" id="userList"></div>
+    <br />
+    <a href="/logout">Se déconnecter</a>
+  </div>
+
+  <script>
+    const user = {
+      id: "<%= user._id %>",
+      pseudo: "<%= user.pseudo %>"
+    };
+  </script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/script.js"></script>
+</body>
+</html>
